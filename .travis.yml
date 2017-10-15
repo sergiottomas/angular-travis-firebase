@@ -3,6 +3,11 @@ language: node_js
 node_js:
   - node #will use latest code
 
+branches:
+  only:
+    - master
+    - /^greenkeeper/.*$/
+
 before_script: #commands to run before the build step
   - npm install -g --silent firebase-tools #installs firebase to run firebase deploy
   - npm install -g --silent @angular/cli
