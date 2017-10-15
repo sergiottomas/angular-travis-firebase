@@ -3,11 +3,19 @@ language: node_js
 node_js:
   - node #will use latest code
 
+branches:
+  only:
+    - master #will only build for master branch commits
+
 before_script: #commands to run before the build step
+  - npm install -g --silent firebase-tools #installs firebase to run firebase deploy
   - npm install -g --silent @angular/cli
 
 script: #the build step
   - ng build --prod
+
+after_success:
+  - firebase deploy --prod --token $FIREBASE_TOKEN --non-interactive #firebase deploy after angular-cli build
 
 notifications:
   email: #only receibe the email when the build status changes (someone broke the build)
