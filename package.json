@@ -21,7 +21,7 @@
     "@angular/http": "^4.4.5",
     "@angular/platform-browser": "^4.4.5",
     "@angular/platform-browser-dynamic": "^4.4.5",
-    "@angular/platform-server": "^4.4.5",
+    "@angular/platform-server": "^5.2.6",
     "@angular/router": "^4.4.5",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
